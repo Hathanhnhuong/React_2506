@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    display: flex; /* Dùng để sắp xếp các hộp có trong body theo hướng ngang dọc trái phải,.. */
+    flex-direction: column; /* Sắp xếp các phần tưt con trong hộp theo chiều dọc từ trên xuống dưới*/
+    align-items: center;/* dùng để căn giữa theo chiều dọc*/
+    padding: 40px 20px;
+
+}
+.container {
+    max-width: 800px; /* Tối đa chiều rộng của container */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container*/
+    display: grid; /* Dùng để sắp xếp các phần tử con trong container theo dạng lưới*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* chia đều chiều rộng của container, co giãn tùy màn hình, kích thước tối thiểu và chiếm lĩnh không gian*/
+    gap: 15px; /* Khoảng cách giữa các item*/
+
+}
+.card, .introduct, .tool, .language, .interest, .portfolio, .details{
+    background-color: #1a1a1a;
+    border-radius: 12px; /* Dùng để bo trò 1 hình khồn phải hình tròn ở cả 4 góc*/
+    padding: 20px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2); /* tạo bóng */
+
+}
+.avatar{
+    grid-column: span 1; /* Chiếm 1 cột trong grid */
+    text-align: center; /* Căn nội dung ra giữa theo chiều ngang của phần tử chứa nó */
+}
+.avatar img {
+    grid-column: span 2;
+
+}
+.interest spam, .language span {
+    background: #333; /* đặt màu nền cho 1 phần tử*/
+    padding: 5px 10px;
+    border-radius:  20px;
+    margin: 0 5px;
+    display: inline-block; /* nằm trên 1 dòng, đặt chiều rộng giống block, có khoảng cácg giưac các thẻ*/
+
+}
+.card h3, .introduct p {
+    margin: 5px;
+    font-size: 24px; /* đặt kích thước chữ */
+}
+.portfolio a{
+    color: #00acee;
+
+}
+.details span{
+    display: block; /* chiếm toàn bộ chiều ngang, tự động xuống 1 dòng kh nằm cạnh phần tử khác*/
+    margin: 5px 0;
+}
